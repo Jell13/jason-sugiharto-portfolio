@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import Home from './sections/Home'
+
+import About from './sections/About'
+import { ReactLenis } from 'lenis/dist/lenis-react'
+import Hero from './sections/Hero'
 import NavBar from './components/NavBar'
 
 function App() {
@@ -9,9 +12,12 @@ function App() {
 
   return (
     <>
-      <div>
-        <NavBar/>
-        <Home/>
+      <div className='min-h-screen'>
+        <ReactLenis root>
+          <NavBar/>
+          <Hero/>
+          <About/>
+        </ReactLenis>
       </div>
     </>
   )
