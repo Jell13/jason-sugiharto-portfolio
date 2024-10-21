@@ -1,14 +1,29 @@
-import React from 'react'
+import { useScroll, useTransform, motion } from 'framer-motion'
+import React, { useEffect } from 'react'
 
 const Hero = () => {
+
+    const { scrollY } = useScroll()
+
+    const opacity = useTransform(
+        scrollY,
+        [0, 300],
+        [1, 0]
+    )
+
   return (
-    <section className='h-screen w-full grainy'>
-      <div className='w-full h-full flex justify-center items-center'>
-        <div className='flex flex-col'>
-            <h1>JASON SUGIHARTO</h1>
+    <motion.section 
+    style={{opacity}}
+    className='h-screen relative grainy'>
+      <div className='w-full h-full flex sticky justify-center items-center px-4'>
+        <div className='flex flex-col items-center justify-center gap-3'>
+            <h1 className='text-4xl tracking-tighter font-semibold md:text-8xl'>JASON SUGIHARTO</h1>
+            <div className=' grid-cols-12'>
+                
+            </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

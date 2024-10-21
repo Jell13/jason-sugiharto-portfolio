@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const NavBar = () => {
 
@@ -16,19 +17,22 @@ const NavBar = () => {
     ]
 
   return (
-    <header className='w-full absolute flex py-7 justify-between items-center px-20'>
-      <div className=''>
-        <h1 className='font-semibold tracking-tight text-xl'>By Jason <span></span></h1>
+    <div className='w-full absolute py-8 md:px-10 px-4 flex inset-x-0 z-10 justify-between items-center'>
+      <div className='flex flex-col md:flex-row md:gap-7 md:items-center'>
+        <div className='flex'>
+          <p className='text-lg font-semibold tracking-tighter'>By Jason</p><span>&#169;</span>
+        </div>
+        <p className='opacity-85 tracking-tighter'>(Web & Software Developer)</p>
       </div>
-      <nav className='flex gap-4'>
+      <nav className='flex md:flex-row flex-col md:gap-5'>
         {links.map(({id, name, link}) => (
-          <a href={link} className='relative group text-lg' key={id}>
-              {name}
-              <span className='absolute left-0 border-b-2 border-gray-500 group-hover:w-full w-0 duration-300 cursor-pointer'>&nbsp;</span>
-          </a>
+            <a key={id} href={link}>
+                {name}
+                <span>&nbsp;</span>
+            </a>
         ))}
       </nav>
-    </header>
+    </div>
   )
 }
 
