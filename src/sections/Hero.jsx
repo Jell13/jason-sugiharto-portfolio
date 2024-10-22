@@ -1,5 +1,6 @@
-import { useScroll, useTransform, motion } from 'framer-motion'
+import { useScroll, useTransform, motion, animate } from 'framer-motion'
 import React, { useEffect } from 'react'
+import NavBar from '../components/NavBar'
 
 const Hero = () => {
 
@@ -17,21 +18,41 @@ const Hero = () => {
       [0, 100]
     )
 
+    const DURATION = 1;
+    const STAGGER = 0.15;
+
   return (
+    
     <motion.section 
     style={{opacity}}
-    className='h-screen sticky grainy'>
+    className='h-screen grainy'>
+      <NavBar/>
       <motion.div 
       style={{y: translate}}
       className='w-full h-full flex justify-center items-center px-4'>
         <div className='flex flex-col items-center justify-center gap-3'>
-            <h1 className='text-4xl tracking-tighter font-semibold md:text-8xl'>JASON SUGIHARTO</h1>
-            <div className=' grid-cols-12'>
-                
+            <div>
+              {"JASON SUGIHARTO".split("").map((letter, i) => (
+                <motion.span 
+                key={i}
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{
+                  duration: DURATION,
+                  delay: STAGGER * i
+                }}
+                className='text-8xl font-semibold tracking-tighter'>
+                  {letter}
+                </motion.span>
+              ))}
+            </div>
+            <div className='grid-cols-12'>
+           
             </div>
         </div>
       </motion.div>
     </motion.section>
+    
   )
 }
 
