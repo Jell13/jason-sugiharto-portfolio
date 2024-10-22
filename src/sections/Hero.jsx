@@ -26,7 +26,6 @@ const Hero = () => {
     <motion.section 
     style={{opacity}}
     className='h-screen grainy'>
-      <NavBar/>
       <motion.div 
       style={{y: translate}}
       className='w-full h-full flex justify-center items-center px-4'>
