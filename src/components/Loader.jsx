@@ -19,7 +19,7 @@ const Loader = ({setLoading}) => {
           opacity: 1,
           y: 0,
           transition: {
-            ease: [0.6, 0.01, -0.05, 0.95],
+            ease: [0.17, 0.67, 0.83, 0.67],
             duration: 1.6,
           },
         },
@@ -33,19 +33,41 @@ const Loader = ({setLoading}) => {
         },
       };
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false)
-        }, 3000)
-        return () => clearTimeout(timer)
-    })
+      const itemMain = {
+        hidden: { opacity: 0, y: 200 },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: [0.17, 0.67, 0.83, 0.67],
+            duration: 1.6,
+          },
+        },
+      };
+
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setLoading(false)
+    //     }, 3000)
+    //     return () => clearTimeout(timer)
+    // })
 
   return (
-    <div>
-      <div>
-        <img src={myHero} alt="" />
-      </div>
-    </div>
+    <motion.div className='w-screen h-[150%] flex justify-center items-center'>
+      <motion.div 
+      variants={container}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      onAnimationComplete={() => setLoading(false)}
+      className='w-[400px]'>
+        <motion.div
+        variants={itemMain}
+        >
+          <motion.img layoutId='main-picture' className='object-contain' src={myHero} alt=""/>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   )
 }
 

@@ -5,7 +5,7 @@ import About from './sections/About'
 import { ReactLenis } from 'lenis/dist/lenis-react'
 import Hero from './sections/Hero'
 import NavBar from './components/NavBar'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Loader from './components/Loader'
 
 function App() {
@@ -14,6 +14,8 @@ function App() {
 
   return (
     <>
+
+      <AnimatePresence>
       {loading ? (
         <motion.div>
           <Loader setLoading={setLoading}/>
@@ -27,7 +29,7 @@ function App() {
           </ReactLenis>
         </>
       )}
-    
+      </AnimatePresence>
     </>
   )
 }

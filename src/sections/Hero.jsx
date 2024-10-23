@@ -1,6 +1,7 @@
 import { useScroll, useTransform, motion, animate } from 'framer-motion'
 import React, { useEffect } from 'react'
 import NavBar from '../components/NavBar'
+import myHero from "../assets/myhero.png"
 
 const Hero = () => {
 
@@ -46,7 +47,9 @@ const Hero = () => {
               ))}
             </div>
             <div className='grid-cols-12'>
-           
+              <div className='w-[300px]'>
+                <motion.img layoutId='main-picture' transition={{ease: [0.17, 0.67, 0.83, 0.67], duration: 1.6}} className='object-contain' src={myHero}/>
+              </div>
             </div>
         </div>
       </motion.div>
