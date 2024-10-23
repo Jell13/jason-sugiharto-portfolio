@@ -47,8 +47,8 @@ const Hero = () => {
               ))}
             </div>
             <div className='grid-cols-12'>
-              <div className='w-[300px]'>
-                <motion.img layoutId='main-picture' transition={{ease: [0.17, 0.67, 0.83, 0.67], duration: 1.6}} className='object-contain' src={myHero}/>
+              <div className='w-[300px] mt-10'>
+                <motion.img layoutId='main-image' transition={{ease: [0.17, 0.67, 0.83, 0.67], duration: 2}} className='object-contain' src={myHero}/>
               </div>
             </div>
         </div>

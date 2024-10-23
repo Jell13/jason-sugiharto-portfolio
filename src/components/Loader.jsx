@@ -53,7 +53,7 @@ const Loader = ({setLoading}) => {
     // })
 
   return (
-    <motion.div className='w-screen h-[150%] flex justify-center items-center'>
+    <motion.div className='w-screen h-screen grainy flex justify-center items-center'>
       <motion.div 
       variants={container}
       initial="hidden"
@@ -64,7 +64,7 @@ const Loader = ({setLoading}) => {
         <motion.div
         variants={itemMain}
         >
-          <motion.img layoutId='main-picture' className='object-contain' src={myHero} alt=""/>
+          <motion.img layoutId="main-image" className='object-contain' src={myHero} alt=""/>
         </motion.div>
       </motion.div>
     </motion.div>
