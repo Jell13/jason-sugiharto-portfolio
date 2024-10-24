@@ -29,8 +29,8 @@ const Hero = () => {
     className='h-screen grainy'>
       <motion.div 
       style={{y: translate}}
-      className='w-full h-full flex justify-center items-center px-4'>
-        <div className='flex flex-col items-center justify-center gap-3'>
+      className='w-full h-full flex justify-center items-center px-10'>
+        <div className='w-full flex flex-col items-center justify-center gap-3'>
             <div>
               {"JASON SUGIHARTO".split("").map((letter, i) => (
                 <motion.span 
@@ -41,14 +41,17 @@ const Hero = () => {
                   duration: DURATION,
                   delay: STAGGER * i
                 }}
-                className='text-8xl font-semibold tracking-tighter'>
+                className='md:text-8xl text-3xl font-semibold tracking-tighter'>
                   {letter}
                 </motion.span>
               ))}
             </div>
-            <div className='grid-cols-12'>
+            <div className='w-full relative flex gap-10 justify-center'>
+              <div className='flex flex-col col-span-4 justify-center items-center'>
+                <p>I design and develop website</p>
+              </div>
               <div className='w-[300px] mt-10'>
-                <motion.img layoutId='main-image' transition={{ease: [0.17, 0.67, 0.83, 0.67], duration: 2}} className='object-contain' src={myHero}/>
+                <motion.img layoutId='main-image' transition={{ease: [0.17, 0.67, 0.83, 0.67], duration: 1.3}} className='object-contain' src={myHero}/>
               </div>
             </div>
         </div>

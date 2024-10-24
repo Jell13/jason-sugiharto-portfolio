@@ -40,7 +40,7 @@ const Loader = ({setLoading}) => {
           y: 0,
           transition: {
             ease: [0.17, 0.67, 0.83, 0.67],
-            duration: 1.6,
+            duration: 1.2,
           },
         },
       };
