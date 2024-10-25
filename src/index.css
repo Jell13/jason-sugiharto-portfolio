@@ -4,6 +4,7 @@
 
 html{
     scroll-behavior: smooth;
+    font-family: 'General Sans', sans-serif;
 }
   
 html.lenis, html.lenis body {

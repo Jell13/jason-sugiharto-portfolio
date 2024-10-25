@@ -10,13 +10,11 @@ const NavBar = () => {
     const variant = {
       initial: {
         opacity: 0,
-        y: -100
       },
       animate: {
-        y: 0,
         opacity: 1,
         transition: {
-          duration: 2,
+          duration: 1.2,
           ease: "easeInOut",
           staggerChildren: 0.35
         }
