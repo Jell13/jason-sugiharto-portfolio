@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
 
-import About from './sections/About'
 import { ReactLenis } from 'lenis/dist/lenis-react'
 import Hero from './sections/Hero'
 import NavBar from './components/NavBar'
 import { AnimatePresence, motion } from 'framer-motion'
 import Loader from './components/Loader'
+import Services from './sections/Services'
 
 function App() {
   
@@ -25,7 +25,7 @@ function App() {
           <ReactLenis root>
             <NavBar/>
             <Hero/>
-            <About/>
+            <Services/>
           </ReactLenis>
         </>
       )}

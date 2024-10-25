@@ -14,7 +14,7 @@ const NavBar = () => {
       animate: {
         opacity: 1,
         transition: {
-          duration: 1.2,
+          duration: 1.6,
           ease: "easeInOut",
           staggerChildren: 0.35
         }
@@ -33,12 +33,12 @@ const NavBar = () => {
     const links = [
         {
             id: 1,
-            name: "About",
-            link: "#about"
+            name: "Services",
+            link: "#services"
         },
         {
             id: 2,
-            name: "Projects",
+            name: "About",
             link: "#projects"
         }
     ]

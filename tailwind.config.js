@@ -8,6 +8,8 @@ export default {
     fontFamily: {
       'genSans': ['General Sans', 'sans-serif']
     },
+    // screens:{
+    // },
     extend: {},
   },
   plugins: [],

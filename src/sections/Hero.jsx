@@ -36,7 +36,7 @@ const Hero = () => {
       style={{y: translate, scale: scaleDown}}
       className='w-full h-full flex justify-center items-center px-10'>
         <div className='w-full flex flex-col items-center justify-center gap-3 mt-20'>
-            <div>
+            <div className=''>
               {"JASON SUGIHARTO".split("").map((letter, i) => (
                 <motion.span 
                 key={i}
@@ -44,9 +44,10 @@ const Hero = () => {
                 animate={{opacity: 1}}
                 transition={{
                   duration: DURATION,
-                  delay: STAGGER * i
+                  delay: STAGGER * i,
+                  ease: "easeInOut"
                 }}
-                className='xl:text-[7rem] md:text-[5rem] tracking-tighter font-genSans'>
+                className='lg:text-[7rem] md:text-[5rem] tracking-tighter font-genSans'>
                   {letter}
                 </motion.span>
               ))}
@@ -59,11 +60,11 @@ const Hero = () => {
               }}}
               className='flex col-span-4 flex-col justify-center items-center'>
                 <div className='w-[30ch]'>
-                  <p>Crafting sleek, responsive front-end experiences that turn ideas into interactive, user-friendly interfaces. Every pixel matters, and every line of code drives results.</p>
+                  <p className='text-lg'>Crafting sleek, responsive front-end experiences that turn ideas into interactive, user-friendly interfaces. Every pixel matters, and every line of code drives results.</p>
                 </div>
               </motion.div>
               <div className='col-span-4 flex justify-center items-center'>
-                <motion.img transition={{ease: [0.17, 0.67, 0.83, 0.67], duration: 1.3}} className='object-contain h-[250px] bg-inherit' src={myHero}/>
+                <motion.img layoutId='main-image' transition={{ease: [0.6, 0.01, -0.05, 0.9], duration: 1.3}} className='object-contain h-[250px] bg-inherit' src={myHero}/>
               </div>
               <div className='flex flex-col items-end col-span-4 justify-end'>
                 <div>
